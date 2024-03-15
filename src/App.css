@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
+.nodeContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1px); /* 8 columns with equal width */
+  grid-gap: 25px; /* Gap between grid items */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.node {
+  background-color: black;
+  width: 2vw;
+  height: 3px;
+  border-radius: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Make the container take up the full height of the viewport */
 }
