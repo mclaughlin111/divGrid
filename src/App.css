@@ -6,14 +6,16 @@ body {
 .nodeContainer {
   display: grid;
   grid-template-columns: repeat(8, 1px); /* 8 columns with equal width */
-  grid-gap: 25px; /* Gap between grid items */
+  grid-gap: 20px; /* Gap between grid items */
 }
 
 .node {
   background-color: black;
   width: 2vw;
   height: 3px;
-  border-radius: 1px;
+
+  transition-duration: 50ms;
+  transition-timing-function: ease-in-out
 }
 
 .container {
