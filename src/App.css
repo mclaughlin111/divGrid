@@ -1,3 +1,8 @@
+body {
+  overflow: hidden;
+  position: relative; /* Make body the positioning context for absolutely positioned elements */
+}
+
 .nodeContainer {
   display: grid;
   grid-template-columns: repeat(8, 1px); /* 8 columns with equal width */
@@ -16,4 +21,13 @@
   justify-content: center; /* Horizontally center */
   align-items: center; /* Vertically center */
   height: 100vh; /* Make the container take up the full height of the viewport */
+  position: relative; /* Position relative for absolute positioning inside it */
+}
+
+.mousePosition {
+  color: black;
+  position: absolute; /* Position absolutely */
+  bottom: 20px; /* Adjust as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
 }

@@ -39,19 +39,28 @@ function NodeGrid() {
 
   const calculateRotation = (i, j) => {
     const nodeCenterX = i * 25 + 12.5; // Adjusted for node width (10px) and gap (5px)
-    const nodeCenterY = j * 25 + 12.5; // Adjusted for node height (5px) and gap (5px)
+    const nodeCenterY = j ; // Adjusted for node height (5px) and gap (5px)
 
+    // Calculate the angle between the cursor and the node center
     const deltaX = cursorPosition.x - nodeCenterX;
     const deltaY = cursorPosition.y - nodeCenterY;
+    let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
-    return Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+ 
+
+    return angle;
   };
 
   return (
-    <div className='container'>
-      <div className='nodeContainer'>
-        {generateNodes()}
+    <div>
+      <div className='container'>
+        <div className='nodeContainer'>
+          {generateNodes()}
+        </div>
       </div>
+      <p className="mousePosition">
+        Cursor Position: <span>{cursorPosition.x}, {cursorPosition.y}</span>
+      </p>
     </div>
   );
 }
